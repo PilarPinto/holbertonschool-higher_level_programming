@@ -2,7 +2,7 @@
 /**
  * check_cycle - Check if a lopp exist in the linked list
  * @list: Is the pointer to the structure
- *
+ * Return: 1 if a loop exists or 0 if it does not
  */
 int check_cycle(listint_t *list)
 {
