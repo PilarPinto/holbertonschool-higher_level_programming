@@ -6,15 +6,14 @@ if __name__ == '__main__':
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
         exit(1)
 
-    nb1 = int(argv[1])
-    nb2 = int(argv[3])
+    a = int(argv[1])
+    b = int(argv[3])
     symb = argv[2]
 
     ops = {'+': opr.add, '-': opr.sub, '*': opr.mul, '/': opr.div}
     for ind in ops:
         if symb == ind:
-            print('{} {} {} = {}'.format(nb1, symb, nb2, ops[ind](nb1, nb2)))
+            print('{} {} {} = {}'.format(a, symb, b, ops[ind](a, b)))
             exit(0)
-        else:
-            print('Unknown operator. Available operators: +, -, * and /')
-            exit(1)
+        print('Unknown operator. Available operators: +, -, * and /')
+        exit(1)
