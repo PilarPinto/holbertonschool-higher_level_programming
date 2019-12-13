@@ -15,5 +15,5 @@ if __name__ == '__main__':
         if symb == ind:
             print('{} {} {} = {}'.format(a, symb, b, ops[ind](a, b)))
             exit(0)
-        print('Unknown operator. Available operators: +, -, * and /')
-        exit(1)
+    print('Unknown operator. Available operators: +, -, * and /')
+    exit(1)
