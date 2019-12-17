@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
     list_tup = []
-    for indx in range(0, len(tuple_a)):
+    for indx in range(0, 2):
         try:
             valuea = tuple_a[indx]
         except IndexError:
@@ -12,4 +12,3 @@ def add_tuple(tuple_a=(), tuple_b=()):
             valueb = 0
         list_tup.append(valuea + valueb)
     return tuple(list_tup)
-
