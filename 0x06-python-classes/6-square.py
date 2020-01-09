@@ -8,7 +8,6 @@ class Square:
         This is the constructor
         """
         self.__size = size
-
         self.__position = position
 
 
@@ -44,21 +43,20 @@ class Square:
         """
         Put the value and handle the errors
         """
-        if not isinstance(value, tuple) or len(value) !=2 or\
+        if (not isinstance(value, tuple) or len(value) !=2 or\
         type(value[0]) is not int or value[0] < 0 or\
-        type(value[1]) is not int or value[1] < 0:
-            if not value[0] >= 0 and value[1] >= 0:
-                raise TypeError('position must be a tuple\
-                of 2 positive integers')
-            else:
-                self.__position = position
+        type(value[1]) is not int or value[1] < 0):
+            raise TypeError('position must be a tuple\
+            of 2 positive integers')
+        else:
+            self.__position = value
 
 
     def area(self):
         """
         Function to find a square area
         """
-        return(self.__size**2)
+        return self.__size**2
 
 
     def my_print(self):
@@ -66,10 +64,11 @@ class Square:
         Function to print an square
         """
         if self.__size == 0:
-            print()
-            return
-        for x in range(self.position[1]):
             print("")
-        for x in range(self.size):
-            print(' '*self.position[0], end='')
-            print('#'*self.size)
+            return
+        for x in range(self.__position[1]):
+            print("")
+        for x in range(self.__size):
+            print(' ' * self.position[0], end='')
+            print('#'*self.__size, end='')
+            print("")
