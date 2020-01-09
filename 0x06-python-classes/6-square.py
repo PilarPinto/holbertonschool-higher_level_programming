@@ -7,9 +7,19 @@ class Square:
         """
         This is the constructor
         """
+        if not isinstance(size, int):
+            raise TypeError('size must be an integer')
+        elif size < 0:
+            raise ValueError('size must be >= 0')
         self.__size = size
 
+        if not isinstance(position, tuple):
+            if not position[0] >= 0 and position[1] >= 0:
+                raise TypeError('position must be a tuple\
+                of 2 positive integers')
         self.__position = position
+
+
 
     @property
     def size(self):
@@ -64,7 +74,5 @@ class Square:
         if self.size == 0:
             print()
         for x in range(self.size):
-            if self.position[1] > 0:
-                break;
             print(' '*self.position[0], end='')
             print('#'*self.size)
