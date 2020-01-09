@@ -7,16 +7,8 @@ class Square:
         """
         This is the constructor
         """
-        if not isinstance(size, int):
-            raise TypeError('size must be an integer')
-        elif size < 0:
-            raise ValueError('size must be >= 0')
         self.__size = size
 
-        if not isinstance(position, tuple):
-            if not position[0] >= 0 and position[1] >= 0:
-                raise TypeError('position must be a tuple\
-                of 2 positive integers')
         self.__position = position
 
 
@@ -52,7 +44,9 @@ class Square:
         """
         Put the value and handle the errors
         """
-        if not isinstance(value, tuple):
+        if not isinstance(value, tuple) or len(value) !=2 or\
+        type(value[0]) is not int or value[0] < 0 or\
+        type(value[1]) is not int or value[1] < 0:
             if not value[0] >= 0 and value[1] >= 0:
                 raise TypeError('position must be a tuple\
                 of 2 positive integers')
@@ -71,8 +65,11 @@ class Square:
         """
         Function to print an square
         """
-        if self.size == 0:
+        if self.__size == 0:
             print()
+            return
+        for x in range(self.position[1]):
+            print("")
         for x in range(self.size):
             print(' '*self.position[0], end='')
             print('#'*self.size)
