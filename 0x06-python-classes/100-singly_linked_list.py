@@ -32,7 +32,7 @@ class Node:
 class SinglyLinkedList:
     def __init__(self):
         """constructor to initiate this object"""
-        self.head = None
+        self.__head = None
 
     def sorted_insert(self, value):
         '''Funtion to hadle the single linked list '''
