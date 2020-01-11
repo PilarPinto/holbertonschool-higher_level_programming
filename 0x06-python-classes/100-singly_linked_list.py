@@ -7,17 +7,20 @@ class Node:
 
         @property
         def data(self):
+            '''get of data'''
             return self.__data
 
         @data.setter
         def data(self, value):
-            if not isintance(value, int):
+            '''set of data'''
+            if not isinstance(value, int):
                 raise TypeError('data must be an integer')
             else:
                 self.__data = value
 
         @property
         def next_node(self):
+            ''' get of next_node'''
             return self.__next_node
 
         @next_node.setter
@@ -30,6 +33,7 @@ class Node:
 
 
 class SinglyLinkedList:
+    '''Class of the single linked list'''
     def __init__(self):
         """constructor to initiate this object"""
         self.__head = None
