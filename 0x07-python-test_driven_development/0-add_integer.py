@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 ''' Program that made a integers addition'''
 
+
 def add_integer(a, b=98):
     '''Function to add two integers'''
     if type(a) is not int and type(a) is not float:
