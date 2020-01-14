@@ -1,9 +1,15 @@
 #!/usr/bin/python3
-'''Print a square of hastags'''
+'''
+Print a square of hastags
+the function receives a number
+that indicate the size of the side
+'''
 
 
 def print_square(size):
-    '''Function to print a square of hastags'''
+    '''
+    Function to print a square of hastags
+    '''
     if not (isinstance(size, int)):
         raise TypeError('size must be an integer')
     if size < 0:
