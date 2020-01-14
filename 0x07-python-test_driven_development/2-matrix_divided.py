@@ -1,9 +1,15 @@
 #!/usr/bin/python3
-''' Function to divides all matrix's elements'''
+'''
+Function to divides all matrix's elements
+by a just one number
+can divide integers and floats with two decimals
+'''
 
 
 def matrix_divided(matrix, div):
-    '''Function two divide each element by a number'''
+    '''
+    Function two divide each element by a number
+    '''
     long_error = 'matrix must be a matrix (list of lists) of integers/floats'
     if type(matrix) is not list:
         raise TypeError(
