@@ -20,4 +20,5 @@ class Student:
                 if type(ele) is str:
                     return {
                         x: getattr(self, x) for x in attrs if hasattr(self, x)}
-        return self.__dict__
+        else:
+            return self.__dict__
