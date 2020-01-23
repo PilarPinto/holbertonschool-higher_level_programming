@@ -82,11 +82,10 @@ If two argument are passed by:
     >>> my_list_t = MyList([4, 3, 6], [7, 8])
     Traceback (most recent call last):
     TypeError: list() takes at most 1 argument (2 given)
-   
+
 Different kind of elements:
 
     >>> my_list_k = MyList([4, 'Off', 6])
     >>> my_list_k.print_sorted()
     Traceback (most recent call last):
-    TypeError: '<' not supported between instances of 'str' and 'int'
-
+    TypeError: unorderable types: str() < int()
