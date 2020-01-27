@@ -7,11 +7,12 @@ import json
 
 class Base:
 '''
-Clase Base
+Class Base
 '''
     __nb_objects = 0
 
     def __init__(self, id=None):
+        '''Init function'''
         if id is not None:
             self.id = id
         else:
@@ -20,6 +21,7 @@ Clase Base
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        '''Converts a list dicionary into a string'''
         if list_dictionaries is None or len(list_dictionaries) is 0:
             return '[]'
         else:
@@ -27,6 +29,7 @@ Clase Base
 
     @classmethod
     def save_to_file(cls, list_objs):
+        '''JSON string to file'''
         filename = '{}.json'.format(cls.__name__)
         if list_objs is None:
             return '[]'
@@ -37,6 +40,7 @@ Clase Base
 
     @staticmethod
     def from_json_string(json_string):
+        '''JSON string to dictionary'''
         if json_string is None or len(json_string) == 0:
             return '[]'
         else:
@@ -44,12 +48,14 @@ Clase Base
 
     @classmethod
     def create(cls, **dictionary):
+        '''Dictionary to instance'''
         inst = cls(1, 1)
         inst.update(**dictionary)
         return inst
 
     @classmethod
     def load_from_file(cls):
+        '''File to instances'''
         filename = '{}.json'.format(cls.__name__)
         try:
             with open(filename, 'r') as f:
