@@ -10,12 +10,13 @@ class Rectangle(Base):
     '''Class rectangle'''
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        '''Constructor'''
-        super().__init__(id)
+        '''Constructor
+        '''
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        super().__init__(id)
 
     def __str__(self):
         '''String print function'''
@@ -28,13 +29,13 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self, valuew):
+    def width(self, value):
         '''Setter of width'''
-        if not isinstance(valuew, int):
+        if not isinstance(value, int):
             raise TypeError('width must be an integer')
-        elif valuew <= 0:
+        elif value <= 0:
             raise ValueError('width must be > 0')
-        self.__width = valuew
+        self.__width = value
 
     @property
     def height(self):
@@ -42,13 +43,13 @@ class Rectangle(Base):
         return self.__height
 
     @width.setter
-    def height(self, valueh):
+    def height(self, value):
         '''setter of height'''
-        if not isinstance(valueh, int):
+        if not isinstance(value, int):
             raise TypeError('height must be an integer')
-        elif valueh <= 0:
+        elif value <= 0:
             raise ValueError('height must be > 0')
-        self.__height = valueh
+        self.__height = value
 
     @property
     def x(self):
