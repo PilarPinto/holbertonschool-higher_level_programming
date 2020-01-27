@@ -49,9 +49,11 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         '''Dictionary to instance'''
-        if cls.__name__ is 'Rectangle':
+        from models.rectangle import Rectangle
+        from models.square import Square
+        if cls is Rectangle:
             inst = cls(1, 1)
-        if cls.__name__ is 'Square':
+        if cls is Square:
             inst = cls(1)
         inst.update(**dictionary)
         return inst
