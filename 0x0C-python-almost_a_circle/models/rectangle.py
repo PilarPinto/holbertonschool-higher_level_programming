@@ -17,6 +17,11 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def __str__(self):
+        '''String print function'''
+        return '[Rectangle] ({}) {}/{} - {}/{}'.format(
+            self.id, self.__x, self.__y, self.__width, self.__height)
+
     @property
     def width(self):
         '''Set of width'''
@@ -84,11 +89,6 @@ class Rectangle(Base):
                 print('\n', end='')
         for row in range(self.__height):
             print('{}{}'.format(' '*self.__x, '#'*self.__width))
-
-    def __str__(self):
-        '''String print function'''
-        return '[Rectangle] ({}) {}/{} - {}/{}'.format(
-            self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
         '''Args function'''
