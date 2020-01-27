@@ -79,14 +79,11 @@ class Rectangle(Base):
 
     def display(self):
         '''Display hastags function'''
-        if self.__width == 0 or self.__height == 0:
-            print()
-        else:
-            if self.__y != 0:
-                for row in range(self.__y):
-                    print('\n', end='')
-            for row in range(self.__height):
-                print('{}{}'.format(' '*self.__x, '#'*self.__width))
+        if self.__y != 0:
+            for row in range(self.__y):
+                print('\n', end='')
+        for row in range(self.__height):
+            print('{}{}'.format(' '*self.__x, '#'*self.__width))
 
     def __str__(self):
         '''String print function'''
