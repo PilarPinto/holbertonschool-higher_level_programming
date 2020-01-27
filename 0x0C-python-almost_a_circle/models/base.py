@@ -33,27 +33,24 @@ class Base:
         filename = '{}.json'.format(cls.__name__)
         if list_objs is None:
             list_objs = []
-        else:
-            with open(filename, 'w') as f:
-                f.write(cls.to_json_string(
-                    [cls.to_dictionary(x) for x in list_objs]))
+        with open(filename, 'w') as f:
+            f.write(cls.to_json_string(
+                [cls.to_dictionary(x) for x in list_objs]))
 
     @staticmethod
     def from_json_string(json_string):
         '''JSON string to dictionary'''
         if json_string is None or len(json_string) == 0:
-            return '[]'
+            return []
         else:
             return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
         '''Dictionary to instance'''
-        from models.rectangle import Rectangle
-        from models.square import Square
-        if cls is Rectangle:
+        if cls.__name__ is 'Rectangle':
             inst = cls(1, 1)
-        if cls is Square:
+        if cls.__name__ is 'Square':
             inst = cls(1)
         inst.update(**dictionary)
         return inst
