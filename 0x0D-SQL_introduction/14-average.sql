@@ -1,3 +1,2 @@
--- List all records of the table
-SELECT AVG(score) FROM second_table;
-
+-- Average of the columns
+SELECT AVG(score) AS average FROM second_table;
