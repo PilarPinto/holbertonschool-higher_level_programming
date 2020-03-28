@@ -3,8 +3,8 @@
 Create a conection and list states with
 capital N
 '''
-import MySQLdb
 import sys
+import MySQLdb
 
 
 def mysqlconnect():
@@ -22,6 +22,9 @@ def mysqlconnect():
 
     for state in states:
         print(state)
+
+    cursor.close()
+    db_connection.close()
 
 if __name__ == '__main__':
     mysqlconnect()
