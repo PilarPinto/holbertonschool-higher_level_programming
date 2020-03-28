@@ -18,7 +18,7 @@ def mysqlconnect():
     states = cursor.fetchall()
 
     for state in states:
-        print(states)
+        print(state)
 
     cursor.close()
     db_connection.close()
