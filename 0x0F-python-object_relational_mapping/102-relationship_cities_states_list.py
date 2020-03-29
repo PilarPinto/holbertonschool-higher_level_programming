@@ -21,5 +21,5 @@ if __name__ == "__main__":
 
     qtwo = session.query(State, City).join(City).order_by(City.id)
 
-    for state, city  in qtwo.all():
+    for state, city in qtwo.all():
         print('{}: {} -> {}'.format(city.id, city.name, state.name))
