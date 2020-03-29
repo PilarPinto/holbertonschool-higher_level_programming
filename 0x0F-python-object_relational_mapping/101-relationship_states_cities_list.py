@@ -19,7 +19,7 @@ if __name__ == "__main__":
     Session.configure(bind=engine)
     session = Session()
 
-    qtwo = session.query(State).join(City).order_by(State.id, City.id)
+    qtwo = session.query(State).outerjoin(City).order_by(State.id, City.id)
 
     for state in qtwo.all():
         print('{}: {}'.format(state.id, state.name))
