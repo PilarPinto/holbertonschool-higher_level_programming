@@ -3,9 +3,9 @@
 import requests
 import sys
 
-if __name__=="__main__":
-    x = requests.get('https://intranet.hbtn.io/status')
+if __name__ == "__main__":
+    var = requests.get('https://intranet.hbtn.io/status')
     print('Body response:')
-    print('\t- type: {}'.format(type(str(x))))
-    print('\t- type: {}'.format(x.text))
-    x.close()
+    print('\t- type: {}'.format(type(str(var))))
+    print('\t- type: {}'.format(var.text))
+    var.close()
