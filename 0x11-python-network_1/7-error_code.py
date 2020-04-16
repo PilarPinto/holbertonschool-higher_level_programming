@@ -9,6 +9,6 @@ import sys
 if __name__ == "__main__":
     var = requests.get(sys.arv[1])
     if (int(var.status_code) >= 400):
-        print("Error code: {}" .format(var.status_code))
+        print("Error code: {}".format(var.status_code))
     else:
         print(var.text)
