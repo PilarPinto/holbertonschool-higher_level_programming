@@ -29,15 +29,15 @@ if __name__ == "__main__":
 
     match_heads = {
         "q": sys.argv[3],
-        "result_type": recent,
+        "result_type": "recent",
         "count": 5
     }
 
-    match_get = request.get(match_tweets, headers=requestAuth,
-                            params=match_heads)
+    match_get = requests.get(match_tweets, headers=requestAut,
+                             params=match_heads)
 
     tweet_posts = match_get.json().get("statuses")
 
-    for ind in tweet_post:
-        print("[{}] {} by {}".format(ind.get("id"), ind.get("user"),
-                                     ind.get("user"), ind("name")))
+    for ind in tweet_posts:
+        print("[{}] {} by {}".format(ind.get("id"), ind.get("text"),
+                                     ind.get("user").get("name")))
