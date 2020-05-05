@@ -4,7 +4,7 @@
 What you should learn from this project:
 
 * Why Javascript programming is amazing (don’t forget to tweet today, with the hashtag #javascriptisamazing :))
-* How to run a Javascript script
+* How to run Javascript script
 * How to create variables and constants
 * What are differences between var, const and let
 * What are all the data types available in Javascript
