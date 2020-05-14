@@ -1,0 +1,4 @@
+// Change color to header with jQuery
+$('DIV#add_item').click(function () {
+  $('UL.my_list').append('<li>Item</li>');
+});
